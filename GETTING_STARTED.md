@@ -43,6 +43,24 @@ python train.py
 
 **Done!** Your submission file is ready at `outputs/submission.csv`
 
+### Step 5: Create Submission Package (30 sec)
+
+```bash
+# Convert report.md to report.pdf (choose one method)
+# Option 1: Using pandoc
+pandoc report.md -o report.pdf
+
+# Option 2: Use online converter
+# Visit: https://www.markdowntopdf.com/
+
+# Then create submission ZIP
+python create_submission_package.py
+```
+
+This creates `submission.zip` with notebook.ipynb and report.pdf.
+
+**Ready to submit!** See [README_SUBMISSION.md](README_SUBMISSION.md) for upload instructions.
+
 ---
 
 ## 📂 What You Get

@@ -195,9 +195,26 @@ See [report.md](report.md) for a detailed methodology summary.
 
 Required for hackathon submission:
 
-1. **submission.csv** - Predictions for private_test.csv
-2. **notebook.ipynb** - Reproducible solution notebook
-3. **report.pdf** - One-page methodology summary (generated from report.md)
+1. **submission.csv** - Predictions for private_test.csv (`outputs/submission.csv`)
+2. **submission.zip** - Contains:
+   - `notebook.ipynb` - Reproducible solution notebook
+   - `report.pdf` - One-page methodology summary
+
+### 📤 Creating Submission Package
+
+```bash
+# 1. Generate predictions
+python train.py
+
+# 2. Convert report to PDF (choose one)
+pandoc report.md -o report.pdf
+# Or use: https://www.markdowntopdf.com/
+
+# 3. Create submission ZIP automatically
+python create_submission_package.py
+```
+
+See [README_SUBMISSION.md](README_SUBMISSION.md) for detailed submission instructions.
 
 ## 🔍 Usage Examples
 
